@@ -95,7 +95,7 @@ if (Tools::getValue('cryptToken') == $cryptToken && ((time() - $timeGenerated) <
 		/* Every row it's a product on order */
 		$csv .= '"'.$p['OrderId'].'","'.$p['CustomerId'].'","'.$p['CustomerEmail'].'","'.$p['OrderDate'].'","'.$p['Id'].'","'.
 			str_replace('"', '""', $p['Name']).'","'.str_replace('"', '""', $p['Url']).'","'.
-			str_replace('"', '""', $p['ImageUrl']).'","PrestaShop"'."\r\n";
+			str_replace('"', '""', $p['ImageUrl']).'","'.str_replace('"', '""', $p['Platform']).'"'."\r\n";
 	}
 
 	/* Send header to force download of a file called export_date.csv */
